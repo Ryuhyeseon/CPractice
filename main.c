@@ -49,4 +49,8 @@ int main(void) { // 메인 함수(return type : int, argument : void)
     printf("not adult\n");
   }
 
+  // c : for == java : for
+  for(int i=0; i<10; i++){
+    printf("i : %d\n", i);
+  }
 }
