@@ -18,18 +18,22 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   //printf("10 / 3 = %f\n", 10 / 3.0);
 
   // true : 1, false : 0
-  printf("10 > 3 = %d\n", 10 > 3);
-  printf("10 < 3 = %d\n", 10 < 3);
+  // printf("10 > 3 = %d\n", 10 > 3);
+  // printf("10 < 3 = %d\n", 10 < 3);
 
   // long long type : %lld
-  long long x = 100000000000000000;
-  printf("x : %lld\n", x);
+  // long long x = 100000000000000000;
+  // printf("x : %lld\n", x);
 
   // sizeof() return byte size
-  unsigned int intNum = 1;
-  printf("intNum size: %lu\n", sizeof(intNum));
+  // unsigned int intNum = 1;
+  // printf("intNum size: %lu\n", sizeof(intNum));
 
-  unsigned short shortNum = 1;
-  printf("shortNum size: %lu\n", sizeof(shortNum));
+  // unsigned short shortNum = 1;
+  // printf("shortNum size: %lu\n", sizeof(shortNum));
+
+  // unsigned : not using nagative number
+  unsigned char charNum = 1;
+  printf("charNum size: %lu\n", sizeof(charNum));
   
 }
