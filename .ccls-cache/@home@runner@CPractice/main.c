@@ -33,7 +33,20 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   // printf("shortNum size: %lu\n", sizeof(shortNum));
 
   // unsigned : not using nagative number
-  unsigned char charNum = 1;
-  printf("charNum size: %lu\n", sizeof(charNum));
+  // unsigned char charNum = 1;
+  // printf("charNum size: %lu\n", sizeof(charNum));
+
+
   
+  // c : if else == java : if else
+  int age = 20;
+  
+  if(age>=20){
+    printf("age : %d\n", age);
+    printf("adult\n");
+  }else{
+    printf("age : %d\n", age);
+    printf("not adult\n");
+  }
+
 }
