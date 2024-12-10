@@ -53,4 +53,11 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   for(int i=0; i<10; i++){
     printf("i : %d\n", i);
   }
+
+  // scanf %d : input data type, &num : save variable
+  printf("input num : ");
+  int num;
+  scanf("%d", &num);
+  printf("num : %d\n", num);
+  
 }
