@@ -54,6 +54,17 @@ int main(void) { // 메인 함수(return type : int, argument : void)
     printf("i : %d\n", i);
   }
 
+  // c : while(1) == java : while(true)
+  int cnt = 0;
+  while(1) {
+    cnt++;
+    printf("while true * %d\n", cnt);
+
+    if(cnt == 10){
+      break;
+    }
+  }
+  
   // scanf %d : input data type, &num : save variable
   printf("input num : ");
   int num;
