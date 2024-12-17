@@ -14,8 +14,8 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   //   return 0;
 
   // operator
-  //printf("10 / 3 = %d\n", 10 / 3);
-  //printf("10 / 3 = %f\n", 10 / 3.0);
+  // printf("10 / 3 = %d\n", 10 / 3);
+  // printf("10 / 3 = %f\n", 10 / 3.0);
 
   // true : 1, false : 0
   // printf("10 > 3 = %d\n", 10 > 3);
@@ -36,39 +36,42 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   // unsigned char charNum = 1;
   // printf("charNum size: %lu\n", sizeof(charNum));
 
-
-  
   // c : if else == java : if else
-  int age = 20;
-  
-  if(age>=20){
-    printf("age : %d\n", age);
-    printf("adult\n");
-  }else{
-    printf("age : %d\n", age);
-    printf("not adult\n");
-  }
+  // int age = 20;
+
+  // if(age>=20){
+  //   printf("age : %d\n", age);
+  //   printf("adult\n");
+  // }else{
+  //   printf("age : %d\n", age);
+  //   printf("not adult\n");
+  // }
 
   // c : for == java : for
-  for(int i=0; i<10; i++){
-    printf("i : %d\n", i);
-  }
+  // for(int i=0; i<10; i++){
+  //   printf("i : %d\n", i);
+  // }
 
   // c : while(1) == java : while(true)
-  int cnt = 0;
-  while(1) {
-    cnt++;
-    printf("while true * %d\n", cnt);
+  // int cnt = 0;
+  // while(1) {
+  //   cnt++;
+  //   printf("while true * %d\n", cnt);
 
-    if(cnt == 10){
-      break;
-    }
-  }
-  
+  //   if(cnt == 10){
+  //     break;
+  //   }
+  // }
+
   // scanf %d : input data type, &num : save variable
-  printf("input num : ");
-  int num;
-  scanf("%d", &num);
-  printf("num : %d\n", num);
-  
+  // printf("input num : ");
+  // int num;
+  // scanf("%d", &num);
+  // printf("num : %d\n", num);
+
+  // User Defined Function
+  printf("User Defined Function returnNum_10 : %d", returnNum_10());
 }
+
+// User Defined Function
+int returnNum_10() { return 10; }
