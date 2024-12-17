@@ -23,6 +23,10 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   personStructure.name = "류혜선";
   printf("personStructure.name : %s\n", personStructure.name);
   printf("personStructurePointer->name : %s\n", personStructurePointer->name);
+
+  personStructurePointer->name  = "update 류혜선";
+  printf("personStructurePointer->name : %s\n", personStructurePointer->name);
+  printf("personStructure.name : %s\n", personStructure.name);
   
   // standard input output
   // printf("Hello World\n"); // 문자열 출력
