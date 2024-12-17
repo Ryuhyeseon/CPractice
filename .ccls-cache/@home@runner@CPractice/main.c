@@ -1,5 +1,5 @@
 #include <stdio.h> // 헤더 파일(표준 입출력 정의 라이브러리 포함)
-
+#include <string.h> // (문자열 라이브러리 포함)
 // Structure
 // struct Person {
 //   int age;
@@ -111,21 +111,25 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   // printf("p : %p\n", p);
 
   // pointer
-  int arr[2][3] = {1, 2, 3, 4, 5, 6};
+  // int arr[2][3] = {1, 2, 3, 4, 5, 6};
   
   // p는 int(*)[3] 타입의 포인터로, "3개의 정수로 이루어진 배열"을 가리킵니다.
-  int (*p)[3] = arr;
+  // int (*p)[3] = arr;
   
   // p == arr
-  printf("arr : %p\n", arr);
-  printf("p : %p\n", p);
+  // printf("arr : %p\n", arr);
+  // printf("p : %p\n", p);
   
   // (*p)[2] == arr[0][2]
-  printf("(*p)[2] == arr[0][2] : %d\n", (*p)[2]);
+  // printf("(*p)[2] == arr[0][2] : %d\n", (*p)[2]);
   
-  printf("*(p[0]+1) == arr[0][1] : %d\n", *(p[0]+1));
-  printf("*(*(p+1)+1)) == arr[1][1] : %d\n", *(*(p+1)+1));
-  
+  // printf("*(p[0]+1) == arr[0][1] : %d\n", *(p[0]+1));
+  // printf("*(*(p+1)+1)) == arr[1][1] : %d\n", *(*(p+1)+1));
+
+  // strcat() : 문자열 연결
+  char a[20] = "concatenate a ";
+  char b[10] = "and b";
+  printf("strcat(a, b) : %s\n", strcat(a, b));
 }
 
 // User Defined Function
