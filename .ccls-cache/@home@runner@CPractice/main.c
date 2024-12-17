@@ -104,6 +104,11 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   printf("*(p+1) : %d\n", *(p+1));
   printf("*(p+2) : %d\n", *(p+2));
   printf("*(p+3) : %d\n", *(p+3));
+
+  // *&p == p
+  printf("a[0] : %p\n", a[0]);
+  printf("*&p : %p\n", *&p);
+  printf("p : %p\n", p);
   
 }
 
