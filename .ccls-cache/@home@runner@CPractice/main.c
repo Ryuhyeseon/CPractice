@@ -96,19 +96,35 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   // printf("User Defined Function returnNum_10 : %d", returnNum_10());
 
   // Array
-  int a[2][2] = {{11, 22},{33, 44}};
-  int *p;
-  p = a[0];
+  // int a[2][2] = {{11, 22},{33, 44}};
+  // int *p;
+  // p = a[0];
   
-  printf("*(p) : %d\n", *(p));
-  printf("*(p+1) : %d\n", *(p+1));
-  printf("*(p+2) : %d\n", *(p+2));
-  printf("*(p+3) : %d\n", *(p+3));
+  // printf("*(p) : %d\n", *(p));
+  // printf("*(p+1) : %d\n", *(p+1));
+  // printf("*(p+2) : %d\n", *(p+2));
+  // printf("*(p+3) : %d\n", *(p+3));
 
   // *&p == p
-  printf("a[0] : %p\n", a[0]);
-  printf("*&p : %p\n", *&p);
+  // printf("a[0] : %p\n", a[0]);
+  // printf("*&p : %p\n", *&p);
+  // printf("p : %p\n", p);
+
+  // pointer
+  int arr[2][3] = {1, 2, 3, 4, 5, 6};
+  
+  // p는 int(*)[3] 타입의 포인터로, "3개의 정수로 이루어진 배열"을 가리킵니다.
+  int (*p)[3] = arr;
+  
+  // p == arr
+  printf("arr : %p\n", arr);
   printf("p : %p\n", p);
+  
+  // (*p)[2] == arr[0][2]
+  printf("(*p)[2] == arr[0][2] : %d\n", (*p)[2]);
+  
+  printf("*(p[0]+1) == arr[0][1] : %d\n", *(p[0]+1));
+  printf("*(*(p+1)+1)) == arr[1][1] : %d\n", *(*(p+1)+1));
   
 }
 
