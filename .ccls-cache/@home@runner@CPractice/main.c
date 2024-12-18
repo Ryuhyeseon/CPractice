@@ -127,9 +127,33 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   // printf("*(*(p+1)+1)) == arr[1][1] : %d\n", *(*(p+1)+1));
 
   // strcat() : 문자열 연결
-  char a[20] = "concatenate a ";
+  char a[20] = "concatenate a "; 
   char b[10] = "and b";
   printf("strcat(a, b) : %s\n", strcat(a, b));
+  printf("after strcat(a, b) a : %s\n", a); // 원본 문자열 변경
+
+  // strcpy() : 문자열 복사
+  char c[20] = "copy a ";
+  char d[10] = "to b";
+  printf("strcpy(c, d) : %s\n", strcpy(c, d));
+  printf("after strcpy(c, d) c : %s\n", c); // 원본 문자열 변경
+
+  // strcmp() : 문자열 ASCII 값 차이 비교
+  printf("strcmp(a, b) : %d\n", strcmp(a, b));
+  printf("strcmp(b, a) : %d\n", strcmp(b, a));
+
+  // strlen() : 문자열 길이
+  printf("strlen(a) : %lu\n", strlen(a));
+  printf("strlen(b) : %lu\n", strlen(b));
+  printf("strlen(c) : %lu\n", strlen(c));
+  printf("strlen(d) : %lu\n", strlen(d));
+  
+  // strchr() : 문자열에서 특정 문자 찾기
+  printf("strchr(a, 'a') : %p\n", strchr(a, 'a'));
+
+  // strstr() : 문자열에서 특정 문자열 찾기
+  printf("strstr(a, \"and\") : %p\n", strstr(a, "and"));
+
 }
 
 // User Defined Function
