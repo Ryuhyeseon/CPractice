@@ -1,6 +1,7 @@
 #include <stdio.h> // 헤더 파일(표준 입출력 정의 라이브러리 포함)
 #include <string.h> // (문자열 라이브러리 포함)
 #include <stdlib.h> // 표준 라이브러리 함수
+#include <math.h> // 수학 라이브러리 함수
 // Structure
 // struct Person {
 //   int age;
@@ -156,27 +157,35 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   // printf("strstr(a, \"and\") : %p\n", strstr(a, "and"));
 
   // atoi(const char *nptr) : 문자열을 정수로 변환 "a" to int
-  char *str_num = "1";
-  printf("atoi(str_num) : %d\n", atoi(str_num));
-  printf("*after atoi(str_num) str_num : %c\n", *str_num); // 원본 문자열은 변경되지 않음
+  // char *str_num = "1";
+  // printf("atoi(str_num) : %d\n", atoi(str_num));
+  // printf("*after atoi(str_num) str_num : %c\n", *str_num); // 원본 문자열은 변경되지 않음
   
   // atof(const char *nptr) : 문자열을 실수로 변환 "a" to float
-  printf("atof(str_num) : %lf\n", atof(str_num));
-  printf("*after atof(str_num) str_num : %c\n", *str_num); // 원본 문자열은 변경되지 않음
+  // printf("atof(str_num) : %lf\n", atof(str_num));
+  // printf("*after atof(str_num) str_num : %c\n", *str_num); // 원본 문자열은 변경되지 않음
 
   //  sprintf(char *restrict s, const char *restrict format, ...) : 숫자를 문자열 변환
-  char buffer[4] = {0};  // 변환된 값을 저장할 버퍼
-  int num = 100;  // 숫자형 변수
+  // char buffer[4] = {0};  // 변환된 값을 저장할 버퍼
+  // int num = 100;  // 숫자형 변수
  
   // sprintf를 사용하여 정수를 문자열로 변환
-  sprintf(buffer, "%d", num);  // 10진수로 변환
-  printf("Converted number: %s\n", buffer);  // 출력: 100
+  // sprintf(buffer, "%d", num);  // 10진수로 변환
+  // printf("Converted number: %s\n", buffer);  // 출력: 100
 
-  char buffer2[50];
-  int num2 = 255;
+  // char buffer2[50];
+  // int num2 = 255;
   
-  sprintf(buffer2, "%x", num2);  // 소문자 16진수로 출력
-  printf("Formatted string (hex): %s\n", buffer2);  // 출력: ff
+  // sprintf(buffer2, "%x", num2);  // 소문자 16진수로 출력
+  // printf("Formatted string (hex): %s\n", buffer2);  // 출력: ff
+
+  // ceil(double x) : 소수점 올림 함수
+  double a = 3.14;
+  printf("ceil(a) : %lf\n", ceil(a));
+
+  // floor(double x) : 소수점 내림 함수
+  printf("floor(a) : %lf\n", floor(a));
+  
 }
 
 // User Defined Function
