@@ -1,5 +1,6 @@
 #include <stdio.h> // 헤더 파일(표준 입출력 정의 라이브러리 포함)
 #include <string.h> // (문자열 라이브러리 포함)
+#include <stdlib.h> // 표준 라이브러리 함수
 // Structure
 // struct Person {
 //   int age;
@@ -127,33 +128,55 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   // printf("*(*(p+1)+1)) == arr[1][1] : %d\n", *(*(p+1)+1));
 
   // strcat() : 문자열 연결
-  char a[20] = "concatenate a "; 
-  char b[10] = "and b";
-  printf("strcat(a, b) : %s\n", strcat(a, b));
-  printf("after strcat(a, b) a : %s\n", a); // 원본 문자열 변경
+  // char a[20] = "concatenate a "; 
+  // char b[10] = "and b";
+  // printf("strcat(a, b) : %s\n", strcat(a, b));
+  // printf("after strcat(a, b) a : %s\n", a); // 원본 문자열 변경
 
   // strcpy() : 문자열 복사
-  char c[20] = "copy a ";
-  char d[10] = "to b";
-  printf("strcpy(c, d) : %s\n", strcpy(c, d));
-  printf("after strcpy(c, d) c : %s\n", c); // 원본 문자열 변경
+  // char c[20] = "copy a ";
+  // char d[10] = "to b";
+  // printf("strcpy(c, d) : %s\n", strcpy(c, d));
+  // printf("after strcpy(c, d) c : %s\n", c); // 원본 문자열 변경
 
   // strcmp() : 문자열 ASCII 값 차이 비교
-  printf("strcmp(a, b) : %d\n", strcmp(a, b));
-  printf("strcmp(b, a) : %d\n", strcmp(b, a));
+  // printf("strcmp(a, b) : %d\n", strcmp(a, b));
+  // printf("strcmp(b, a) : %d\n", strcmp(b, a));
 
   // strlen() : 문자열 길이
-  printf("strlen(a) : %lu\n", strlen(a));
-  printf("strlen(b) : %lu\n", strlen(b));
-  printf("strlen(c) : %lu\n", strlen(c));
-  printf("strlen(d) : %lu\n", strlen(d));
+  // printf("strlen(a) : %lu\n", strlen(a));
+  // printf("strlen(b) : %lu\n", strlen(b));
+  // printf("strlen(c) : %lu\n", strlen(c));
+  // printf("strlen(d) : %lu\n", strlen(d));
   
   // strchr() : 문자열에서 특정 문자 찾기
-  printf("strchr(a, 'a') : %p\n", strchr(a, 'a'));
+  // printf("strchr(a, 'a') : %p\n", strchr(a, 'a'));
 
   // strstr() : 문자열에서 특정 문자열 찾기
-  printf("strstr(a, \"and\") : %p\n", strstr(a, "and"));
+  // printf("strstr(a, \"and\") : %p\n", strstr(a, "and"));
 
+  // atoi(const char *nptr) : 문자열을 정수로 변환 "a" to int
+  char *str_num = "1";
+  printf("atoi(str_num) : %d\n", atoi(str_num));
+  printf("*after atoi(str_num) str_num : %c\n", *str_num); // 원본 문자열은 변경되지 않음
+  
+  // atof(const char *nptr) : 문자열을 실수로 변환 "a" to float
+  printf("atof(str_num) : %lf\n", atof(str_num));
+  printf("*after atof(str_num) str_num : %c\n", *str_num); // 원본 문자열은 변경되지 않음
+
+  //  sprintf(char *restrict s, const char *restrict format, ...) : 숫자를 문자열 변환
+  char buffer[4] = {0};  // 변환된 값을 저장할 버퍼
+  int num = 100;  // 숫자형 변수
+ 
+  // sprintf를 사용하여 정수를 문자열로 변환
+  sprintf(buffer, "%d", num);  // 10진수로 변환
+  printf("Converted number: %s\n", buffer);  // 출력: 100
+
+  char buffer2[50];
+  int num2 = 255;
+  
+  sprintf(buffer2, "%x", num2);  // 소문자 16진수로 출력
+  printf("Formatted string (hex): %s\n", buffer2);  // 출력: ff
 }
 
 // User Defined Function
