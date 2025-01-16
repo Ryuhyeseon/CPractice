@@ -113,6 +113,7 @@ int main(void) { // 메인 함수(return type : int, argument : void)
   // printf("*&p : %p\n", *&p);
   // printf("p : %p\n", p); // p는 a[0]을 가리키는 포인터로 a[0]의 주소가 출력
 
+  // add description to pointer
   int x = 10;
   int *p = &x;  // p는 x의 주소를 저장
   printf("%p\n", &x);   // x의 주소를 출력 (x의 주소)
